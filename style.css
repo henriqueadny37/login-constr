@@ -1,0 +1,100 @@
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+a {
+    font-family: sans-serif;
+    color:#ff0;
+    text-decoration: none;
+}
+a:hover{
+    transition: 0.3s;
+    color: white;
+}
+#logo {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+#cab {
+    box-sizing: border-box;
+    display: flex;
+    height: 70px;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F2421B;
+}
+#lin {
+    display: flex;
+    gap: .6rem;
+    list-style: none;
+}
+#lin a {
+    display: block;
+    padding: .5rem;
+}
+#btn {
+    display:  none;
+}
+@media only screen and (max-width:600px){
+    #btn{
+        display: flex;
+        font-size: 1rem;
+        padding: .5rem 1rem;
+        background: none;
+        cursor: pointer;
+        border: none;
+        gap: .5rem;
+    }
+    #lin{
+        display: block;
+        overflow-y: hidden;
+        visibility: hidden;
+        transition: .6s;
+        position: absolute;
+        height: 0px;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        background: #F2CB05;
+        text-align: center;
+        font-size: large;
+        z-index: 1000;
+    }
+    #lin a{
+        padding: 1rem 0;
+        margin: 0 1rem;
+        color: #F28705;
+        font-weight: bold;
+    }
+    #nave.active #lin{
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    #hamb{
+        border-top: 2px solid #ff0;
+        width: 20px;
+    }
+    #hamb::before, #hamb::after{
+        content: '';
+        display: block;
+        height: 2px;
+        width: 20px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+        color: #ff0;
+    }
+    #nave.active #hamb{
+        border-color: transparent;
+    }
+    #nave.active #hamb::before{
+        transform:rotate(135deg)
+    }
+    #nave.active #hamb::after{
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}

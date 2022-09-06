@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bebas+Neue&family=Dancing+Script&family=Henny+Penny&family=Inter:wght@100;200;300&family=Manrope:wght@800&family=Noto+Sans:wght@400;700&family=Passion+One:wght@700&family=Roboto:ital,wght@1,300&family=Sriracha&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #012030;
+}
+.geral {
+    width: 95%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+    
+}
+.form-img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    padding: 1rem;
+}
+.form-img img {
+    width: 31rem;
+}
+.form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.form-header {
+    display: flex;
+    margin-bottom: 3rem;
+    justify-content: space-between;
+    color: #fff;
+}
+.btn {
+    display: flex;
+    align-items: center;
+}
+.btn button {
+    border: none;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn button:hover {
+    background-color: #ff0;
+    color: white;
+    transition: .3s;
+    color: #000;
+}
+.btn button a {
+    text-decoration: none;
+    font-weight: 500;
+}
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+    background-color: #ff0;
+}
+.input-group {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    color: #ff0;
+}
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+.input-box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+}
+.input-box input:hover {
+    background-color: #eeeeee75;
+    color: #ff0;
+}
+.input-box input:focus-visible {
+    outline: 1px solid #ff0;
+}
+.input-box label,
+.gender-tittle h6 {
+    font-size: 0 75rem;
+   
+}
+.input-box input::placeholder {
+    color: #000000be;
+}
+.gender-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.62rem;
+    padding: 0 0.5rem;
+    color: #ff0;
+}
+.gender-input {
+    display: flex;
+    align-items: center;
+}
+.gender-input input {
+    margin-right: 0.35rem;
+}
+.gender-input label {
+    font-size: 0.81rem;
+    font-weight: 500;
+}
+h6{
+    color: #ff0;
+}
+.c-btn button {
+    width: 100%;
+    margin-top: 2.5rem;
+    padding: 0.62rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.c-btn button:hover {
+    background-color: #ff0;
+    transition: .3s;
+}
+.c-btn button a {
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+}
+
+@media only screen and (max-width:1330px){
+    /*parte da imagem aqui*/
+    .form-img{
+        display: none;
+    }
+    .container{
+        width: 50%;
+    }
+    .form{
+        width: 100%;
+    }
+}
+@media only screen and (max-width:1064px) {
+    .container{
+        width: 90%;
+        height: auto;
+    }
+    .input-group{
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 10rem;
+        padding-right: 5rem;
+    }
+    .gender-input{
+        margin-top: 2rem;
+    }
+    .gender-group{
+        flex-direction: column;
+    }
+    .gender-input{
+        margin-top: 0.5rem;
+    }
+}
